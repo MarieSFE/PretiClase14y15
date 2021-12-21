@@ -1,0 +1,84 @@
+@import "colores";
+$p50:50px;
+$ancho: 500px;
+$h3desk: 33px;
+$h3mob: 22px;
+
+
+.encabezado{
+    width: $ancho+50;
+    padding:$p50;
+    h1{
+        font-size: 50px;
+    }
+}
+
+//map get
+$familiaTipografica:(
+    color: rgb(16, 204, 211),
+    centro: center,
+    tFuente: 35 px,
+    1rem: 1rem, 
+);
+
+
+.textmapa{
+    background-color: map-get( $familiaTipografica, color ); 
+    text-align: map-get($familiaTipografica,centro);
+
+}
+
+//condicionales
+$vista: desktop;
+body {
+    @if $vista == desktop {
+        @media only screen and (min-width: 1023px){
+            h3{
+                font-size: $h3desk;
+                color:$azul;
+            }
+        }  
+    } @else if $vista == mobile {
+        h3 { font-size: $h3mob;
+        color:$rojo; }
+    } @else {
+        h3{
+            font-size: 12 px;
+            color: $negro;
+        }
+    }
+}
+
+//bucle padding
+@for $i from 1 through 5 {
+    .pad#{$i} {
+        padding: 10px * $i;
+    }
+
+}
+
+@each $color in $azul, $rojo, $negro, $blanco {
+    .#{$color} {
+        color: #{$color};
+    }
+}
+
+@each $margin in 20, 30, 50{
+    .ma-#{$margin} {
+      margin:#{$margin}px;
+}
+}
+
+
+/* /map no me sale
+/$familiaTipografica: (
+    encabezado: tahoma,
+    subtitulo: arial,
+
+);
+
+h3 {
+    font-family: map-get ($familiaTipografica,encabezado);
+}
+*/
+

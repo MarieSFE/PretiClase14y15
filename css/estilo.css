@@ -1,0 +1,168 @@
+.gridContainerPadre {
+  display: grid;
+  grid-template-areas: "header header header header" "nav nav nav nav" "section1 section1 section1 section1" "section2 section2 section2 section2" "footer footer footer footer";
+  grid-template-rows: 100px 130px 700px 300px 250px;
+  grid-template-columns: 25% 25% 25% 25%; }
+
+.header {
+  grid-area: header; }
+
+.nav {
+  grid-area: nav; }
+
+.section1 {
+  grid-area: section1; }
+
+.section2 {
+  grid-area: section2; }
+
+footer {
+  grid-area: footer; }
+
+/* vista mobile Index*/
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  .gridContainerPadre {
+    display: grid;
+    grid-template-areas: "header" "nav" "section1" "section2" "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: 200px 350px 1fr 350px 200px; }
+  .header {
+    grid-area: header; }
+  .nav {
+    grid-area: nav;
+    display: block;
+    width: 100%; }
+  .section1 {
+    grid-area: section1; }
+  .section2 {
+    grid-area: section2; }
+  footer {
+    grid-area: footer;
+    height: 175vh; }
+  .flex-center {
+    justify-content: center; } }
+
+.gridContainerMedia {
+  display: grid;
+  grid-template-areas: "header header header header" "nav nav nav nav" "secmedia secmedia secmedia secmedia" "footer footer footer footer";
+  grid-template-rows: 150px 150px 1000px 300px;
+  grid-template-columns: 1fr 1fr 1fr 1fr; }
+
+.header {
+  grid-area: header; }
+
+.lista1 {
+  grid-area: nav; }
+
+.secmedia {
+  grid-area: secmedia; }
+
+.footer {
+  grid-area: footer; }
+
+/* vista mobile Media*/
+@media only screen and (min-width: 0px) and (max-width: 768px) {
+  .gridContainerMedia {
+    display: grid;
+    grid-template-areas: "header" "nav" "secmedia"		 "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: 200px 350px 1200px 550px; }
+  .header {
+    grid-area: header; }
+  .lista1 {
+    grid-area: nav; }
+  .secmedia {
+    grid-area: secmedia; }
+  .footer {
+    grid-area: footer;
+    height: 175vh; } }
+
+.encabezado {
+  width: 550px;
+  padding: 50px; }
+  .encabezado h1 {
+    font-size: 50px; }
+
+.textmapa {
+  background-color: #10ccd3;
+  text-align: center; }
+
+@media only screen and (min-width: 1023px) {
+  body h3 {
+    font-size: 33px;
+    color: lightblue; } }
+
+.pad1 {
+  padding: 10px; }
+
+.pad2 {
+  padding: 20px; }
+
+.pad3 {
+  padding: 30px; }
+
+.pad4 {
+  padding: 40px; }
+
+.pad5 {
+  padding: 50px; }
+
+.lightblue {
+  color: lightblue; }
+
+.red {
+  color: red; }
+
+.black {
+  color: black; }
+
+.white {
+  color: white; }
+
+.ma-20 {
+  margin: 20px; }
+
+.ma-30 {
+  margin: 30px; }
+
+.ma-50 {
+  margin: 50px; }
+
+/* /map no me sale
+/$familiaTipografica: (
+    encabezado: tahoma,
+    subtitulo: arial,
+
+);
+
+h3 {
+    font-family: map-get ($familiaTipografica,encabezado);
+}
+*/
+footer {
+  background-color: lightblue;
+  display: flex; }
+  footer h3 {
+    color: white; }
+
+.boton, .boton--aceptar, .boton--cancelar {
+  width: 200px;
+  height: 50px;
+  background-color: white;
+  color: black;
+  border-radius: 20p;
+  border: 1px solid black;
+  text-align: center; }
+
+.boton--aceptar {
+  background-color: green;
+  color: white; }
+
+.boton--cancelar {
+  background-color: red;
+  color: white; }
+
+p {
+  color: red;
+  font-size: 40px;
+  text-align: center; }
